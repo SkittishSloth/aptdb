@@ -2,28 +2,21 @@ package aptdb.core.apt
 
 import com.lordcodes.turtle.shellRun
 
-
-data class ConfigNode(
-  val key: String,
-  val value: String?,
-  val children: List<ConfigNode>
-);
-
-sealed class Node(open val key: String) {
-  data class Leaf(
-    override val key: String,
-    val value: String
-  ): Node(key)
-  
-  data class NonLeaf(
-    override val key: String,
-    val children: List<Node>
-  ): Node(key)
+interface ConfigurationProvider {
+    fun configDump(): String = shellRun("apt-config", listOf("dump"))
+    
+    fun aptConfiguration(): AptConfiguration = AptConfiguration.create(this)
 }
+
+object DefaultConfigurationProvider : ConfigurationProvider { }
 
 data class AptConfiguration private constructor(
   private val config: Map<String, String>
 ) {
+    
+    val rootDir: String by lazy {
+        config["Dir"]
+    }
 
   fun str(): List<String> =
     config.map{ (k, v) ->
@@ -32,16 +25,13 @@ data class AptConfiguration private constructor(
     }
   
   companion object {
-    fun create(): AptConfiguration {
-      val dump = shellRun("apt-config", listOf("dump"))
-      val lines = dump.split("\n")
-      val config = lines.map { it.split(" ") }
-           .map { it[0] to it[1] }
-           .toMap()
-      return AptConfiguration(config)
-    }
+    fun create(configProvider: ConfigurationProvider): AptConfiguration =
+        configProvider.configDump()
+            .split("\n")
+            .map { line -> line.split(" ") }
+            .map { parts -> parts[0] to parts[1].replace("\"", "") }
+            .toMap()
+            .let { AptConfiguration(it) }
   }
   
 }
-
-fun configDump(): String = shellRun("apt-config", listOf("dump"))

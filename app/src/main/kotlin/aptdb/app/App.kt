@@ -6,6 +6,6 @@ package aptdb.app
 import aptdb.core.apt.*
 
 fun main() {
-  val aptConfig = AptConfiguration.create()
+  val aptConfig = AptConfiguration.create(DefaultConfigurationProvider)
   aptConfig.str().forEach { println(it) }
 }
