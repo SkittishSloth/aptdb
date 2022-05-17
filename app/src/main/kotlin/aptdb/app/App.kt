@@ -5,7 +5,13 @@ package aptdb.app
 
 import aptdb.core.apt.*
 
+import java.nio.file.Files
+
 fun main() {
   val aptConfig = AptConfiguration.create(DefaultConfigurationProvider)
-  aptConfig.str().forEach { println(it) }
+  
+  println("State dir: ${aptConfig.state}")
+  println("Lists dir: ${aptConfig.lists}")
+  println("Contents:")
+  Files.list(aptConfig.lists).forEach { println("\t$it") }
 }

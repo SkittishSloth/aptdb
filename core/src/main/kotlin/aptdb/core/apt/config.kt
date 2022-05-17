@@ -1,5 +1,9 @@
 package aptdb.core.apt
 
+import java.nio.file.*
+
+import kotlin.io.path.*
+
 import com.lordcodes.turtle.shellRun
 
 interface ConfigurationProvider {
@@ -10,19 +14,51 @@ interface ConfigurationProvider {
 
 object DefaultConfigurationProvider : ConfigurationProvider { }
 
-data class AptConfiguration private constructor(
-  private val config: Map<String, String>
+data class ConfigurationProperties(
+ private val config: Map<String, String>
 ) {
-    
-    val rootDir: String by lazy {
-        config["Dir"]
-    }
+  val dir: String? by lazy {
+    property("Dir")
+  }
+  
+  val state: String? by lazy {
+    property("Dir", "State")
+  }
+  
+  val lists: String? by lazy {
+    property("Dir", "State", "lists")
+  }
+  
+  private fun buildKey(vararg parts: String): String =
+    parts.reduce { a: String, b: String -> "$a::$b" }
+  
+  private fun property(vararg keyParts: String): String? = this.let {
+    println("Key: ${buildKey(*keyParts)}")
+    println("Contained? ${config.contains(buildKey(*keyParts))}")
+    config[buildKey(*keyParts)]
+  }
+}
 
-  fun str(): List<String> =
-    config.map{ (k, v) ->
-      val value = v.replace("\"", "")
-      "$k ->> $value"
+data class AptConfiguration private constructor(
+  private val properties: ConfigurationProperties
+) {
+  val dir: Path? by lazy {
+    properties.dir?.let { Paths.get(it) }
+  }
+  
+  val state: Path? by lazy {
+    properties.dir?.let { d ->
+      properties.state?.let { s -> Paths.get(d, s) }
     }
+  }
+  
+  val lists: Path? by lazy {
+    properties.dir?.let { d->
+      properties.state?.let { s ->
+        properties.lists?.let { l -> Paths.get(d, s, l) }
+      }
+    }
+  }
   
   companion object {
     fun create(configProvider: ConfigurationProvider): AptConfiguration =
@@ -31,7 +67,7 @@ data class AptConfiguration private constructor(
             .map { line -> line.split(" ") }
             .map { parts -> parts[0] to parts[1].replace("\"", "") }
             .toMap()
+            .let { ConfigurationProperties(it) }
             .let { AptConfiguration(it) }
   }
-  
 }
