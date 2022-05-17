@@ -9,10 +9,23 @@ import java.nio.file.Files
 
 fun main() {
   val aptConfig = AptConfiguration.create(DefaultConfigurationProvider)
+  debugConfig(aptConfig)
   
+  val sources = DefaultSourcesProvider.sources(aptConfig)
+  debugSources(sources)
+}
+
+fun debugConfig(aptConfig: AptConfiguration) {
   println("Dir: ${aptConfig.dir}")
   println("State dir: ${aptConfig.state}")
   println("Lists dir: ${aptConfig.lists}")
   println("Contents:")
   Files.list(aptConfig.lists).forEach { println("\t$it") }
+  
+  println("Etc: ${aptConfig.etc}")
+}
+
+fun debugSources(sources: List<Source>?) {
+  println("Sources:")
+  sources?.forEach { println(it) } ?: println("<No sources returned>")
 }

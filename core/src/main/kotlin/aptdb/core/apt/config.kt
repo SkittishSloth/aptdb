@@ -29,37 +29,56 @@ data class ConfigurationProperties(
     property("Dir", "State", "lists")
   }
   
+  val etc: String? by lazy {
+    property("Dir", "Etc")
+  }
+  
+  val sourceList: String? by lazy {
+    property("Dir", "Etc", "sourcelist")
+  }
+  
+  val sourceParts: String? by lazy {
+    property("Dir", "Etc", "sourceparts")
+  }
+  
   private fun buildKey(vararg parts: String): String =
     parts.reduce { a: String, b: String -> "$a::$b" }
   
-  private fun property(vararg keyParts: String): String? = this.let {
-    println("Key: ${buildKey(*keyParts)}")
-    println("Contained? ${config.contains(buildKey(*keyParts))}")
+  private fun property(vararg keyParts: String): String? =
     config[buildKey(*keyParts)]
-  }
 }
 
 data class AptConfiguration private constructor(
   private val properties: ConfigurationProperties
 ) {
   val dir: Path? by lazy {
-    properties.dir?.let {
-      println("dir from properties: '$it'")
-      Paths.get(it)
-    }
+    properties.dir?.let { Paths.get(it) }
   }
   
   val state: Path? by lazy {
-    dir?.let { d ->
-      properties.state?.let { s -> d.resolve(s) }
-    }
+    dir.resolve { state }
   }
   
   val lists: Path? by lazy {
-    state?.let { s ->
-      properties.lists?.let { l -> s.resolve(l) }
-    }
+    state.resolve { lists }
   }
+  
+  val etc: Path? by lazy {
+    dir.resolve { etc }
+  }
+  
+  val sourceList: Path? by lazy {
+    etc.resolve { sourceList }
+  }
+  
+  val sourceParts: Path? by lazy {
+    etc.resolve { sourceParts }
+  }
+  
+  private fun Path?.resolve(prop: ConfigurationProperties.() -> String?): Path? =
+    this?.let { t ->
+      properties.prop()?.let { p -> t.resolve(p) }
+    }
   
   companion object {
     fun create(configProvider: ConfigurationProvider): AptConfiguration =
