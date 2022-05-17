@@ -43,20 +43,21 @@ data class AptConfiguration private constructor(
   private val properties: ConfigurationProperties
 ) {
   val dir: Path? by lazy {
-    properties.dir?.let { Paths.get(it) }
+    properties.dir?.let {
+      println("dir from properties: '$it'")
+      Paths.get(it)
+    }
   }
   
   val state: Path? by lazy {
-    properties.dir?.let { d ->
-      properties.state?.let { s -> Paths.get(d, s) }
+    dir?.let { d ->
+      properties.state?.let { s -> d.resolve(s) }
     }
   }
   
   val lists: Path? by lazy {
-    properties.dir?.let { d->
-      properties.state?.let { s ->
-        properties.lists?.let { l -> Paths.get(d, s, l) }
-      }
+    state?.let { s ->
+      properties.lists?.let { l -> s.resolve(l) }
     }
   }
   
@@ -65,9 +66,13 @@ data class AptConfiguration private constructor(
         configProvider.configDump()
             .split("\n")
             .map { line -> line.split(" ") }
-            .map { parts -> parts[0] to parts[1].replace("\"", "") }
+            .map { parts -> parts[0] to cleanValue(parts[1]) }
             .toMap()
             .let { ConfigurationProperties(it) }
             .let { AptConfiguration(it) }
+  
+    private fun cleanValue(value: String): String =
+      value.replace("\";", "")
+           .replace("\"", "")
   }
 }

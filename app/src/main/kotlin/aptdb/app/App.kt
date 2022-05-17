@@ -10,6 +10,7 @@ import java.nio.file.Files
 fun main() {
   val aptConfig = AptConfiguration.create(DefaultConfigurationProvider)
   
+  println("Dir: ${aptConfig.dir}")
   println("State dir: ${aptConfig.state}")
   println("Lists dir: ${aptConfig.lists}")
   println("Contents:")
