@@ -1,0 +1,207 @@
+Architecture: 
+Breaks: 
+Build-Essential: 
+Build-Ids: 
+Built-Using: 
+Cnf-Extra-Commands: 
+Cnf-Ignore-Commands: 
+Cnf-Priority-Bonus: 
+Cnf-Visible-Pkgname: 
+Conflicts: 
+Depends: 
+Description: 
+Description: : 
+Description: Ada binding to the GNU MultiPrecision library: 
+Description: Ada binding to the ncurses text interface library: 
+Description: Ada CGI interface: 
+Description: Ada library for writing console applications: 
+Description: Another Plot PACKage: 
+Description: Audio/Video communications framework: 
+Description: AUnit, a unit testing framework for Ada: 
+Description: base58 encode/decode: 
+Description: Batteries included: 
+Description: batteries-included conduit: 
+Description: bindings for socket services in Ada: 
+Description: BioPerl wrappers: 
+Description: Bio++ Phylogenetics library: 
+Description: Bio++ Sequence library: 
+Description: Blackfriday: 
+Description: book: 
+Description: casual approach to creating and sending Email:: 
+Description: CLHEP: 
+Description: C++ library of signal processing and communication routines: 
+Description: Clients to gridsite: 
+Description: Compact LMS7002 library suitable for MCU: 
+Description: Computational Logic for Applicative Common Lisp: 
+Description: Container module for classes in the MAGE package: 
+Description: Conversion of WordPerfect documents to LaTeX: 
+Description: Crunchy unroller: 
+Description: cryptographic numbers: 
+Description: Dallas 1-wire support: 
+Description: debug symbols of TclCL: 
+Description: Dedicated User Environment: 
+Description: Disk ARchive: 
+Description: DocBook: 
+Description: Embeddable Common-Lisp: 
+Description: EventMachine SOCKSify shim: 
+Description: examples for nim-hts: 
+Description: examples for seqkit: 
+Description: examples for vcfanno: 
+Description: existential type: 
+Description: Export formats: 
+Description: Extended Object Tcl (XOTcl): 
+Description: Extension library for Lua 5.0: 
+Description: Extra modules for classes in the MAGE package: 
+Description: Fast Light Toolkit - example games: 
+Description: Fast strong hash functions: 
+Description: Fault tolerant search utilities: 
+Description: Flexibly reshape data: 
+Description: Flexi-streams: 
+Description: Gambas image effects: 
+Description: Gambas OpenGL component: 
+Description: General purpose computer algebra system: 
+Description: git commands imported as System::Sub subs in the git:: 
+Description: GNU C Library: 
+Description: GNU R: 
+Description: GNU R extensions for 'ggplot2': 
+Description: GNU R graphical lasso: 
+Description: GNU R Medication Adherence: 
+Description: GNU R spatial dependence: 
+Description: GNU R template model builder: 
+Description: Go gRPC Middlewares: 
+Description: Google Authentication Library: 
+Description: GUI: 
+Description: GUI for lpr: 
+Description: hardware accelerated 2D Graphics library : 
+Description: (h)ascii for the masses: 
+Description: Haskell 98 semigroupoids: 
+Description: High-level XTRX API library: 
+Description: ibus-table input method: 
+Description: ID3 Tag Library: 
+Description: IJS raster image transport protocol: 
+Description: ikiwiki hosting: 
+Description: Implementation of JSR 223: 
+Description: Implementation of JSR 243: 
+Description: Insomnia's Basic ToolKit: 
+Description: Java Plugin Framework: 
+Description: Key String: 
+Description: King James Version of the Bible: 
+Description: libcrypt shared library: 
+Description: Library of DSP functions, developed for XTRX SDR: 
+Description: libvdeplug nested plugin: 
+Description: libvdeplug plugin: 
+Description: Logrus: 
+Description: Low-level XTRX hardware abstraction library: 
+Description: luabind c++ binding for Lua: 
+Description: Main interpreter library for Lua 5.0: 
+Description-md5: 
+Description: MH & nmh: 
+Description: Micro string library: 
+Description: Mobile Robot Programming Toolkit - Metapackage: 
+Description: Multi-lingual software speech synthesizer: 
+Description: Music for Endgame: 
+Description: Next Scripting Framework (NSF): 
+Description: OCaml implementation of symmetric cryptographic algorithms: 
+Description: Off The Rails: 
+Description: OSS Proxy Daemon: 
+Description: Package xstrings: 
+Description: Pandoc filter: 
+Description: Parma Polyhedra Library: 
+Description: parser for HTTP messages: 
+Description: perl data language: 
+Description: Perl library: 
+Description: Perl module for validating Net:: 
+Description: Perl module to parse an email Received: 
+Description: Phase Plane Plus Auto: 
+Description: PNG: 
+Description: Portability Libraries: 
+Description: Portable Stack Manipulation: 
+Description: POSIX.5 Ada interface to operating system services: 
+Description: Pretty time zone: 
+Description: Processing of data: 
+Description: Python 3 cairo bindings: 
+Description: Python3 cairo bindings: 
+Description: Python3 module for calculations with uncertainties: 
+Description: Python bindings for hnswlib: 
+Description: Python bindings for PETSc libraries: 
+Description: Python bindings for SLEPc libraries: 
+Description: Python client for tldr: 
+Description: Python-HDF4: 
+Description: Python library to manipulate dates, times, timestamps: 
+Description: Qt Quick Controls 2: 
+Description: Quantum Information Science Kit (Qiskit): 
+Description: qusage: 
+Description: rbtrace: 
+Description: RE2/J: 
+Description: readbuffer/writebuffer: 
+Description: Reiser4's application abstraction library: 
+Description: replication system for PostgreSQL: 
+Description: R package: 
+Description: SAF's HPI: 
+Description: SASS for Python: 
+Description: SASS for Python 3: 
+Description: server for educational content: 
+Description: Seven Kingdoms Ancient Adversaries: 
+Description: Simple Document Indexing System for Humans: 
+Description: Snap: 
+Description: sorted container types: 
+Description: Speech Dispatcher: 
+Description: StackVec: 
+Description: standard Geo:: 
+Description: swap and assoc: 
+Description: TeX Live: 
+Description: tools biological sequences: 
+Description: Toolz in Cython: 
+Description: transitional dummy package: 
+Description: Transitional dummy package for: 
+Description: Twitter API wrapper for Python: 
+Description: two functions: 
+Description: UFO: 
+Description: Update Configuration File(s): 
+Description: USB3380 abstraction layer for libusb: 
+Description: UTF8-CPP: 
+Description: various JACK tools: 
+Description: vertical shoot'em-up similar to Raptor: 
+Description: Virtual Distributed Ethernet: 
+Description: vpoll device: 
+Description: Web Services Made Easy: 
+Description: XMPP XEP-0280: 
+Description: ZenTest provides 4 different tools: 
+Efi-Vendor: 
+Enhances: 
+Essential: 
+Filename: 
+Ghc-Package: 
+Go-Import-Path: 
+Gstreamer-Decoders: 
+Gstreamer-Elements: 
+Gstreamer-Encoders: 
+Gstreamer-Uri-Sinks: 
+Gstreamer-Uri-Sources: 
+Gstreamer-Version: 
+Homepage: 
+Important: 
+Installed-Size: 
+Lua-Versions: 
+Maintainer: 
+MD5sum: 
+Multi-Arch: 
+Package: 
+Postgresql-Catversion: 
+Pre-Depends: 
+Priority: 
+Protected: 
+Provides: 
+Python-Egg-Name: 
+Python-Version: 
+Recommends: 
+Replaces: 
+Ruby-Versions: 
+Section: 
+SHA256: 
+Size: 
+Source: 
+Suggests: 
+Tag: 
+Version: 
+X-Cargo-Built-Using: 

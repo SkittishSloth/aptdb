@@ -9,4 +9,4 @@
  */
 
 rootProject.name = "aptdb"
-include("app", "core")
+include("app", "core", "data")

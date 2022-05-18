@@ -1,4 +1,6 @@
 bin/
+.theia/
+
 # Created by https://www.toptal.com/developers/gitignore/api/gradle,osx,intellij,vim
 # Edit at https://www.toptal.com/developers/gitignore?templates=gradle,osx,intellij,vim
 

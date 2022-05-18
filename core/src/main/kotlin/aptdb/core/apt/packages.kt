@@ -86,6 +86,10 @@ data class Package(
     csv("Replaces")
   }
   
+  val tag: List<String>? by lazy {
+      csv("Tag")
+  }
+  
   val sha1: String? by lazy {
     property("SHA1")
   }
