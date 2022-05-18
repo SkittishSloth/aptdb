@@ -2,6 +2,7 @@ package aptdb.core.apt
 
 import java.nio.file.*
 
+import kotlin.collections.*
 import kotlin.io.path.*
 
 import com.lordcodes.turtle.shellRun
@@ -14,8 +15,57 @@ interface ConfigurationProvider {
 
 object DefaultConfigurationProvider : ConfigurationProvider { }
 
+enum class PropertyType {
+  Marker,
+  Simple,
+  Complex
+  ;
+}
+
+interface ConfigurationParser {
+  fun stringProperty(line: String): Boolean {
+    val parts = line.split(" ")
+    val key = parts[0]
+    val value = parts[1]
+    return !(key.endsWith("::") || (value == "\"\""))
+  }
+  
+  fun propertyType(line: String): PropertyType {
+    TODO()
+  }
+}
+
+object DefaultConfigurationParser: ConfigurationParser { }
+
+sealed class ConfigurationProperty() {
+  abstract val name: String
+
+  data class StringProperty(
+    override val name: String,
+    val value: String
+  ): ConfigurationProperty() {
+    
+  }
+  
+  data class ListProperty(
+    override val name: String,
+    val value: List<String>
+  ): ConfigurationProperty() {
+    
+  }
+  
+  data class StructuredProperty(
+    override val name: String,
+    val value: Map<String, ConfigurationProperty>
+  ): ConfigurationProperty() {
+    
+  }
+}
+
+
+
 data class ConfigurationProperties(
- private val config: Map<String, String>
+ private val config: Map<String, List<String>>
 ) {
   val dir: String? by lazy {
     property("Dir")
@@ -41,11 +91,22 @@ data class ConfigurationProperties(
     property("Dir", "Etc", "sourceparts")
   }
   
+  val architecture: String? by lazy {
+    property("APT", "Architecture")
+  }
+  
+  val architectures: List<String>? by lazy {
+    list("APT", "Architectures")
+  }
+  
   private fun buildKey(vararg parts: String): String =
     parts.reduce { a: String, b: String -> "$a::$b" }
   
   private fun property(vararg keyParts: String): String? =
-    config[buildKey(*keyParts)]
+    config[buildKey(*keyParts)]?.firstOrNull()
+    
+  private fun list(vararg keyParts: String): List<String>? =
+    config[buildKey(*keyParts)]?.filter { it != "" }
 }
 
 data class AptConfiguration private constructor(
@@ -85,8 +146,10 @@ data class AptConfiguration private constructor(
         configProvider.configDump()
             .split("\n")
             .map { line -> line.split(" ") }
-            .map { parts -> parts[0] to cleanValue(parts[1]) }
-            .toMap()
+            .groupBy(
+              { it[0] },
+              { cleanValue(it[1]) }
+            )
             .let { ConfigurationProperties(it) }
             .let { AptConfiguration(it) }
   

@@ -1,0 +1,32 @@
+Architecture: 
+Breaks: 
+Conflicts: 
+Depends: 
+Description: 
+Description: Eigen is a C++ template library for linear algebra: 
+Description: Emscripten: 
+Description: GNU Linear Programming Kit: 
+Description: Off-the-Record (OTR) Messaging allows you to have private conversations over instant messaging by providing: 
+Description: Semigroupoids: 
+Description: UTF8-CPP: 
+Description: Universal ctags: 
+Description: fwknop: 
+Description: mold: 
+Description: swap and assoc: 
+Essential: 
+Filename: 
+Homepage: 
+Installed-Size: 
+MD5sum: 
+Maintainer: 
+Package: 
+Pre-Depends: 
+Provides: 
+Recommends: 
+Replaces: 
+SHA1: 
+SHA256: 
+SHA512: 
+Size: 
+Suggests: 
+Version: 

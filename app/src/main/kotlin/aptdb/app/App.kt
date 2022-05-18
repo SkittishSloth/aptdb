@@ -8,12 +8,26 @@ import aptdb.core.apt.*
 import java.nio.file.Files
 
 fun main() {
-  val aptConfig = AptConfiguration.create(DefaultConfigurationProvider)
-  debugConfig(aptConfig)
+  //val aptConfig = AptConfiguration.create(DefaultConfigurationProvider)
+  //debugConfig(aptConfig)
   
-  val sources = DefaultSourcesProvider.sources(aptConfig)
-  debugSources(sources)
+  //val sources = DefaultSourcesProvider.sources(aptConfig)
+  //debugSources(sources)
+  
+  val indexTargets = DefaultIndexTargetsProvider.indexTargets()
+  
+  val firstIndex = indexTargets[0]
+  val file = firstIndex.file
+  val packages = file?.let { DefaultPackageProvider.packages(it) }
+  println("Number of packages: ${packages?.size}")
+  
+  packages.dbgField("Suggests") { suggests }
 }
+
+fun <T> List<Package>?.dbgField(fieldName: String, prop: Package.() -> T) =
+  this?.filter { it.prop() != null }
+          ?.firstOrNull()
+          ?.let { println("$fieldName Sample: '${it.prop()}'") }
 
 fun debugConfig(aptConfig: AptConfiguration) {
   println("Dir: ${aptConfig.dir}")
@@ -27,5 +41,5 @@ fun debugConfig(aptConfig: AptConfiguration) {
 
 fun debugSources(sources: List<Source>?) {
   println("Sources:")
-  sources?.forEach { println(it) } ?: println("<No sources returned>")
+  sources?.forEach { println(it.listName) } ?: println("<No sources returned>")
 }
