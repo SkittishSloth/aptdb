@@ -12,10 +12,12 @@ plugins {
 repositories {
     // Use the plugin portal to apply community plugins in convention plugins.
     gradlePluginPortal()
+    mavenCentral()
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin")
+    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.20")
+    implementation("io.arrow-kt.analysis.kotlin:io.arrow-kt.analysis.kotlin.gradle.plugin:2.0.2")
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {

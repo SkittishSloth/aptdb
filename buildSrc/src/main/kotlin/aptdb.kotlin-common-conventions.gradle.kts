@@ -7,6 +7,7 @@
 plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
     id("org.jetbrains.kotlin.jvm")
+    id("io.arrow-kt.analysis.kotlin")
 }
 
 repositories {
@@ -17,18 +18,18 @@ repositories {
 val kotestVersion: String by extra("5.2.3")
 
 dependencies {
-    constraints {
-        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    }
-
     // Align versions of all Kotlin components
-    implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.6.20"))
 
     // Use the Kotlin JDK 8 standard library.
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation ("org.jetbrains.kotlin:kotlin-reflect")
+    
+    // Arrow
+    implementation(platform("io.arrow-kt:arrow-stack:1.0.1"))
 
-    // Align versions of all Kotlin components
-    implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
+    implementation("io.arrow-kt:arrow-core")
+    implementation("io.arrow-kt:arrow-fx-coroutines")
     
     testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
     testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
