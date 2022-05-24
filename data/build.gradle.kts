@@ -7,5 +7,8 @@ plugins {
 dependencies {
     api(project(":core"))
     
-    implementation("com.arcadedb:arcadedb-engine:21.10.1")
+    implementation("org.jetbrains.xodus:dnq:2.0.0")
+    
+    implementation("org.kodein.db:kodein-db-jvm:0.8.1-beta")
+    implementation("org.kodein.db:kodein-leveldb-jni-jvm-linux:0.8.1-beta")
 }
