@@ -5,6 +5,7 @@ plugins {
 }
 
 dependencies {
-    implementation("org.jetbrains.xodus:dnq:2.0.0")
     api(project(":core"))
+    
+    implementation("com.arcadedb:arcadedb-engine:21.10.1")
 }
