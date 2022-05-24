@@ -1,7 +1,5 @@
 package aptdb.core.apt
 
-import arrow.analysis.pre
-
 import kotlin.io.path.*
 
 import java.net.URL
@@ -47,12 +45,8 @@ data class Source private constructor(
   }
   
   companion object {
-    fun from(line: String): Source =
-      line.split(" ").let { fromParts(it) }
-      
-    fun fromParts(parts: List<String>): Source {
-      pre(parts.size > 3) { "Array is too short." }
-      
+    fun from(line: String): Source {
+      val parts = line.split(" ")
       val archiveType = ArchiveType.from(parts[0])
       val repositoryUrl = URL(parts[1])
       val distribution = parts[2]

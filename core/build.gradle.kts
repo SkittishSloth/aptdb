@@ -6,7 +6,7 @@
 
 plugins {
     id("aptdb.kotlin-library-conventions")
-    id("io.arrow-kt.analysis.kotlin") version "2.0.2"
+    //id("io.arrow-kt.analysis.kotlin") version "2.0.2"
 }
 
 dependencies {
