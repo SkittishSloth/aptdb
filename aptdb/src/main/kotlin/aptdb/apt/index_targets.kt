@@ -13,7 +13,7 @@ interface AptIndexTargetProvider {
 
 object DefaultAptIndexTargetProvider: AptIndexTargetProvider { }
 
-data class AptIndexTarget(
+data class RawAptIndexTarget(
   private val data: Map<String, String>
 ) {
   val file: Path? by lazy {
@@ -33,3 +33,13 @@ data class AptIndexTarget(
            .let { AptIndexTarget(it) }
   }
 }
+
+data class AptIndexTarget(
+  val uri: String,
+  val metaKey: String,
+  val shortDesc: String,
+  val description: String,
+  val fileName: String,
+  val optional: Boolean,
+  val keepCompressed: Boolean,
+)

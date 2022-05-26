@@ -1,0 +1,745 @@
+MetaKey: main/source/Sources
+ShortDesc: Sources
+Description: https://deb.debian.org/debian bullseye/main Sources
+URI: https://deb.debian.org/debian/dists/bullseye/main/source/Sources
+Filename: /var/lib/apt/lists/deb.debian.org_debian_dists_bullseye_main_source_Sources.lz4
+Optional: no
+KeepCompressed: yes
+Codename: bullseye
+Label: Debian
+Origin: Debian
+Suite: stable
+Trusted: yes
+Version: 11.3
+Base-URI: https://deb.debian.org/debian/dists/bullseye/
+By-Hash: yes
+Component: main
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Sources
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Sources
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: bullseye
+Repo-URI: https://deb.debian.org/debian/
+Site: https://deb.debian.org/debian
+Sourcesentry: /etc/apt/sources.list:7
+Target-Of: deb-src
+
+MetaKey: main/binary-amd64/Packages
+ShortDesc: Packages
+Description: https://deb.debian.org/debian bullseye/main amd64 Packages
+URI: https://deb.debian.org/debian/dists/bullseye/main/binary-amd64/Packages
+Filename: /var/lib/apt/lists/deb.debian.org_debian_dists_bullseye_main_binary-amd64_Packages.lz4
+Optional: no
+KeepCompressed: yes
+Codename: bullseye
+Label: Debian
+Origin: Debian
+Suite: stable
+Trusted: yes
+Version: 11.3
+Architecture: amd64
+Base-URI: https://deb.debian.org/debian/dists/bullseye/
+By-Hash: yes
+Component: main
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: bullseye
+Repo-URI: https://deb.debian.org/debian/
+Site: https://deb.debian.org/debian
+Sourcesentry: /etc/apt/sources.list:1
+Target-Of: deb
+
+MetaKey: main/source/Sources
+ShortDesc: Sources
+Description: https://deb.debian.org/debian bullseye-updates/main Sources
+URI: https://deb.debian.org/debian/dists/bullseye-updates/main/source/Sources
+Filename: /var/lib/apt/lists/deb.debian.org_debian_dists_bullseye-updates_main_source_Sources.lz4
+Optional: no
+KeepCompressed: yes
+Codename: bullseye-updates
+Label: Debian
+Origin: Debian
+Suite: stable-updates
+Trusted: yes
+Version: 11-updates
+Base-URI: https://deb.debian.org/debian/dists/bullseye-updates/
+By-Hash: yes
+Component: main
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Sources
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Sources
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: bullseye-updates
+Repo-URI: https://deb.debian.org/debian/
+Site: https://deb.debian.org/debian
+Sourcesentry: /etc/apt/sources.list:8
+Target-Of: deb-src
+
+MetaKey: main/binary-amd64/Packages
+ShortDesc: Packages
+Description: https://deb.debian.org/debian bullseye-updates/main amd64 Packages
+URI: https://deb.debian.org/debian/dists/bullseye-updates/main/binary-amd64/Packages
+Filename: /var/lib/apt/lists/deb.debian.org_debian_dists_bullseye-updates_main_binary-amd64_Packages.lz4
+Optional: no
+KeepCompressed: yes
+Codename: bullseye-updates
+Label: Debian
+Origin: Debian
+Suite: stable-updates
+Trusted: yes
+Version: 11-updates
+Architecture: amd64
+Base-URI: https://deb.debian.org/debian/dists/bullseye-updates/
+By-Hash: yes
+Component: main
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: bullseye-updates
+Repo-URI: https://deb.debian.org/debian/
+Site: https://deb.debian.org/debian
+Sourcesentry: /etc/apt/sources.list:2
+Target-Of: deb
+
+MetaKey: main/source/Sources
+ShortDesc: Sources
+Description: https://deb.debian.org/debian-security bullseye-security/main Sources
+URI: https://deb.debian.org/debian-security/dists/bullseye-security/main/source/Sources
+Filename: /var/lib/apt/lists/deb.debian.org_debian-security_dists_bullseye-security_main_source_Sources.lz4
+Optional: no
+KeepCompressed: yes
+Codename: bullseye-security
+Label: Debian-Security
+Origin: Debian
+Suite: stable-security
+Trusted: yes
+Version: 11
+Base-URI: https://deb.debian.org/debian-security/dists/bullseye-security/
+By-Hash: yes
+Component: main
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Sources
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Sources
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: bullseye-security
+Repo-URI: https://deb.debian.org/debian-security/
+Site: https://deb.debian.org/debian-security
+Sourcesentry: /etc/apt/sources.list:9
+Target-Of: deb-src
+
+MetaKey: main/binary-amd64/Packages
+ShortDesc: Packages
+Description: https://deb.debian.org/debian-security bullseye-security/main amd64 Packages
+URI: https://deb.debian.org/debian-security/dists/bullseye-security/main/binary-amd64/Packages
+Filename: /var/lib/apt/lists/deb.debian.org_debian-security_dists_bullseye-security_main_binary-amd64_Packages.lz4
+Optional: no
+KeepCompressed: yes
+Codename: bullseye-security
+Label: Debian-Security
+Origin: Debian
+Suite: stable-security
+Trusted: yes
+Version: 11
+Architecture: amd64
+Base-URI: https://deb.debian.org/debian-security/dists/bullseye-security/
+By-Hash: yes
+Component: main
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: bullseye-security
+Repo-URI: https://deb.debian.org/debian-security/
+Site: https://deb.debian.org/debian-security
+Sourcesentry: /etc/apt/sources.list:3
+Target-Of: deb
+
+MetaKey: main/source/Sources
+ShortDesc: Sources
+Description: https://ftp.debian.org/debian stretch/main Sources
+URI: https://ftp.debian.org/debian/dists/stretch/main/source/Sources
+Filename: /var/lib/apt/lists/ftp.debian.org_debian_dists_stretch_main_source_Sources.lz4
+Optional: no
+KeepCompressed: yes
+Codename: stretch
+Label: Debian
+Origin: Debian
+Suite: oldoldstable
+Trusted: yes
+Version: 9.13
+Base-URI: https://ftp.debian.org/debian/dists/stretch/
+By-Hash: yes
+Component: main
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Sources
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Sources
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: stretch
+Repo-URI: https://ftp.debian.org/debian/
+Site: https://ftp.debian.org/debian
+Sourcesentry: /etc/apt/sources.list:10
+Target-Of: deb-src
+
+MetaKey: main/binary-amd64/Packages
+ShortDesc: Packages
+Description: https://ftp.debian.org/debian stretch/main amd64 Packages
+URI: https://ftp.debian.org/debian/dists/stretch/main/binary-amd64/Packages
+Filename: /var/lib/apt/lists/ftp.debian.org_debian_dists_stretch_main_binary-amd64_Packages.lz4
+Optional: no
+KeepCompressed: yes
+Codename: stretch
+Label: Debian
+Origin: Debian
+Suite: oldoldstable
+Trusted: yes
+Version: 9.13
+Architecture: amd64
+Base-URI: https://ftp.debian.org/debian/dists/stretch/
+By-Hash: yes
+Component: main
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: stretch
+Repo-URI: https://ftp.debian.org/debian/
+Site: https://ftp.debian.org/debian
+Sourcesentry: /etc/apt/sources.list:4
+Target-Of: deb
+
+MetaKey: main/source/Sources
+ShortDesc: Sources
+Description: https://ftp.debian.org/debian stretch-backports/main Sources
+URI: https://ftp.debian.org/debian/dists/stretch-backports/main/source/Sources
+Filename: /var/lib/apt/lists/ftp.debian.org_debian_dists_stretch-backports_main_source_Sources.lz4
+Optional: no
+KeepCompressed: yes
+Codename: stretch-backports
+Label: Debian Backports
+Origin: Debian Backports
+Suite: stretch-backports
+Trusted: yes
+Base-URI: https://ftp.debian.org/debian/dists/stretch-backports/
+By-Hash: yes
+Component: main
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Sources
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Sources
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: stretch-backports
+Repo-URI: https://ftp.debian.org/debian/
+Site: https://ftp.debian.org/debian
+Sourcesentry: /etc/apt/sources.list:11
+Target-Of: deb-src
+
+MetaKey: main/binary-amd64/Packages
+ShortDesc: Packages
+Description: https://ftp.debian.org/debian stretch-backports/main amd64 Packages
+URI: https://ftp.debian.org/debian/dists/stretch-backports/main/binary-amd64/Packages
+Filename: /var/lib/apt/lists/ftp.debian.org_debian_dists_stretch-backports_main_binary-amd64_Packages.lz4
+Optional: no
+KeepCompressed: yes
+Codename: stretch-backports
+Label: Debian Backports
+Origin: Debian Backports
+Suite: stretch-backports
+Trusted: yes
+Architecture: amd64
+Base-URI: https://ftp.debian.org/debian/dists/stretch-backports/
+By-Hash: yes
+Component: main
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: stretch-backports
+Repo-URI: https://ftp.debian.org/debian/
+Site: https://ftp.debian.org/debian
+Sourcesentry: /etc/apt/sources.list:5
+Target-Of: deb
+
+MetaKey: main/binary-amd64/Packages
+ShortDesc: Packages
+Description: https://cli.github.com/packages bullseye/main amd64 Packages
+URI: https://cli.github.com/packages/dists/bullseye/main/binary-amd64/Packages
+Filename: /var/lib/apt/lists/cli.github.com_packages_dists_bullseye_main_binary-amd64_Packages.lz4
+Optional: no
+KeepCompressed: yes
+Codename: bullseye
+Label: gh
+Origin: gh
+Trusted: yes
+Architecture: amd64
+Base-URI: https://cli.github.com/packages/dists/bullseye/
+By-Hash: yes
+Component: main
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: bullseye
+Repo-URI: https://cli.github.com/packages/
+Site: https://cli.github.com/packages
+Sourcesentry: /etc/apt/sources.list:13
+Target-Of: deb
+
+MetaKey: main/binary-amd64/Packages
+ShortDesc: Packages
+Description: https://apt.releases.hashicorp.com bullseye/main amd64 Packages
+URI: https://apt.releases.hashicorp.com/dists/bullseye/main/binary-amd64/Packages
+Filename: /var/lib/apt/lists/apt.releases.hashicorp.com_dists_bullseye_main_binary-amd64_Packages.lz4
+Optional: no
+KeepCompressed: yes
+Codename: bullseye
+Label: Artifactory
+Origin: Artifactory
+Suite: bullseye
+Trusted: yes
+Architecture: amd64
+Base-URI: https://apt.releases.hashicorp.com/dists/bullseye/
+By-Hash: yes
+Component: main
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: bullseye
+Repo-URI: https://apt.releases.hashicorp.com/
+Site: https://apt.releases.hashicorp.com
+Sourcesentry: /etc/apt/sources.list:15
+Target-Of: deb
+
+MetaKey: jdk1.8/binary-amd64/Packages
+ShortDesc: Packages
+Description: https://storage.googleapis.com/bazel-apt stable/jdk1.8 amd64 Packages
+URI: https://storage.googleapis.com/bazel-apt/dists/stable/jdk1.8/binary-amd64/Packages
+Filename: /var/lib/apt/lists/storage.googleapis.com_bazel-apt_dists_stable_jdk1.8_binary-amd64_Packages.lz4
+Optional: no
+KeepCompressed: yes
+Codename: stable
+Label: Bazel
+Origin: Bazel Authors
+Trusted: yes
+Architecture: amd64
+Base-URI: https://storage.googleapis.com/bazel-apt/dists/stable/
+By-Hash: yes
+Component: jdk1.8
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: stable
+Repo-URI: https://storage.googleapis.com/bazel-apt/
+Site: https://storage.googleapis.com/bazel-apt
+Sourcesentry: /etc/apt/sources.list.d/bazel.list:1
+Target-Of: deb
+
+MetaKey: stable/binary-amd64/Packages
+ShortDesc: Packages
+Description: https://download.docker.com/linux/debian bullseye/stable amd64 Packages
+URI: https://download.docker.com/linux/debian/dists/bullseye/stable/binary-amd64/Packages
+Filename: /var/lib/apt/lists/download.docker.com_linux_debian_dists_bullseye_stable_binary-amd64_Packages.lz4
+Optional: no
+KeepCompressed: yes
+Label: Docker CE
+Origin: Docker
+Suite: bullseye
+Trusted: yes
+Architecture: amd64
+Base-URI: https://download.docker.com/linux/debian/dists/bullseye/
+By-Hash: yes
+Component: stable
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: bullseye
+Repo-URI: https://download.docker.com/linux/debian/
+Site: https://download.docker.com/linux/debian
+Sourcesentry: /etc/apt/sources.list.d/docker.list:1
+Target-Of: deb
+
+MetaKey: main/binary-amd64/Packages
+ShortDesc: Packages
+Description: https://packages.cloud.google.com/apt gcsfuse-stretch/main amd64 Packages
+URI: https://packages.cloud.google.com/apt/dists/gcsfuse-stretch/main/binary-amd64/Packages
+Filename: /var/lib/apt/lists/packages.cloud.google.com_apt_dists_gcsfuse-stretch_main_binary-amd64_Packages.lz4
+Optional: no
+KeepCompressed: yes
+Codename: gcsfuse-stretch
+Label: gcsfuse-jessie
+Origin: gcsfuse-jessie
+Suite: gcsfuse-stretch
+Trusted: yes
+Architecture: amd64
+Base-URI: https://packages.cloud.google.com/apt/dists/gcsfuse-stretch/
+By-Hash: yes
+Component: main
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: gcsfuse-stretch
+Repo-URI: https://packages.cloud.google.com/apt/
+Site: https://packages.cloud.google.com/apt
+Sourcesentry: /etc/apt/sources.list.d/gcsfuse.list:1
+Target-Of: deb
+
+MetaKey: main/binary-amd64/Packages
+ShortDesc: Packages
+Description: https://packages.cloud.google.com/apt cloud-sdk-bullseye/main amd64 Packages
+URI: https://packages.cloud.google.com/apt/dists/cloud-sdk-bullseye/main/binary-amd64/Packages
+Filename: /var/lib/apt/lists/packages.cloud.google.com_apt_dists_cloud-sdk-bullseye_main_binary-amd64_Packages.lz4
+Optional: no
+KeepCompressed: yes
+Codename: cloud-sdk-bullseye
+Label: cloud-sdk-bullseye
+Origin: cloud-sdk-bullseye
+Suite: cloud-sdk-bullseye
+Trusted: yes
+Architecture: amd64
+Base-URI: https://packages.cloud.google.com/apt/dists/cloud-sdk-bullseye/
+By-Hash: yes
+Component: main
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: cloud-sdk-bullseye
+Repo-URI: https://packages.cloud.google.com/apt/
+Site: https://packages.cloud.google.com/apt
+Sourcesentry: /etc/apt/sources.list.d/google-cloud-sdk.list:1
+Target-Of: deb
+
+MetaKey: main/binary-amd64/Packages
+ShortDesc: Packages
+Description: https://apt.llvm.org/bullseye llvm-toolchain-bullseye-13/main amd64 Packages
+URI: https://apt.llvm.org/bullseye/dists/llvm-toolchain-bullseye-13/main/binary-amd64/Packages
+Filename: /var/lib/apt/lists/apt.llvm.org_bullseye_dists_llvm-toolchain-bullseye-13_main_binary-amd64_Packages.lz4
+Optional: no
+KeepCompressed: yes
+Codename: llvm-toolchain-bullseye-13
+Trusted: yes
+Architecture: amd64
+Base-URI: https://apt.llvm.org/bullseye/dists/llvm-toolchain-bullseye-13/
+By-Hash: yes
+Component: main
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: llvm-toolchain-bullseye-13
+Repo-URI: https://apt.llvm.org/bullseye/
+Site: https://apt.llvm.org/bullseye
+Sourcesentry: /etc/apt/sources.list.d/llvm.list:1
+Target-Of: deb
+
+MetaKey: main/binary-amd64/Packages
+ShortDesc: Packages
+Description: https://packages.microsoft.com/debian/11/prod bullseye/main amd64 Packages
+URI: https://packages.microsoft.com/debian/11/prod/dists/bullseye/main/binary-amd64/Packages
+Filename: /var/lib/apt/lists/packages.microsoft.com_debian_11_prod_dists_bullseye_main_binary-amd64_Packages.lz4
+Optional: no
+KeepCompressed: yes
+Codename: bullseye
+Label: microsoft-debian-bullseye-prod bullseye
+Origin: microsoft-debian-bullseye-prod bullseye
+Suite: bullseye
+Trusted: yes
+Architecture: amd64
+Base-URI: https://packages.microsoft.com/debian/11/prod/dists/bullseye/
+By-Hash: yes
+Component: main
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: bullseye
+Repo-URI: https://packages.microsoft.com/debian/11/prod/
+Site: https://packages.microsoft.com/debian/11/prod
+Sourcesentry: /etc/apt/sources.list.d/microsoft-prod.list:1
+Target-Of: deb
+
+MetaKey: main/binary-arm64/Packages
+ShortDesc: Packages
+Description: https://packages.microsoft.com/debian/11/prod bullseye/main arm64 Packages
+URI: https://packages.microsoft.com/debian/11/prod/dists/bullseye/main/binary-arm64/Packages
+Filename: /var/lib/apt/lists/packages.microsoft.com_debian_11_prod_dists_bullseye_main_binary-arm64_Packages.lz4
+Optional: no
+KeepCompressed: yes
+Codename: bullseye
+Label: microsoft-debian-bullseye-prod bullseye
+Origin: microsoft-debian-bullseye-prod bullseye
+Suite: bullseye
+Trusted: yes
+Architecture: arm64
+Base-URI: https://packages.microsoft.com/debian/11/prod/dists/bullseye/
+By-Hash: yes
+Component: main
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: bullseye
+Repo-URI: https://packages.microsoft.com/debian/11/prod/
+Site: https://packages.microsoft.com/debian/11/prod
+Sourcesentry: /etc/apt/sources.list.d/microsoft-prod.list:1
+Target-Of: deb
+
+MetaKey: main/binary-armhf/Packages
+ShortDesc: Packages
+Description: https://packages.microsoft.com/debian/11/prod bullseye/main armhf Packages
+URI: https://packages.microsoft.com/debian/11/prod/dists/bullseye/main/binary-armhf/Packages
+Filename: /var/lib/apt/lists/packages.microsoft.com_debian_11_prod_dists_bullseye_main_binary-armhf_Packages.lz4
+Optional: no
+KeepCompressed: yes
+Codename: bullseye
+Label: microsoft-debian-bullseye-prod bullseye
+Origin: microsoft-debian-bullseye-prod bullseye
+Suite: bullseye
+Trusted: yes
+Architecture: armhf
+Base-URI: https://packages.microsoft.com/debian/11/prod/dists/bullseye/
+By-Hash: yes
+Component: main
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: bullseye
+Repo-URI: https://packages.microsoft.com/debian/11/prod/
+Site: https://packages.microsoft.com/debian/11/prod
+Sourcesentry: /etc/apt/sources.list.d/microsoft-prod.list:1
+Target-Of: deb
+
+MetaKey: mysql-8.0/source/Sources
+ShortDesc: Sources
+Description: https://repo.mysql.com/apt/debian bullseye/mysql-8.0 Sources
+URI: https://repo.mysql.com/apt/debian/dists/bullseye/mysql-8.0/source/Sources
+Filename: /var/lib/apt/lists/repo.mysql.com_apt_debian_dists_bullseye_mysql-8.0_source_Sources.lz4
+Optional: no
+KeepCompressed: yes
+Codename: bullseye
+Label: MySQL
+Origin: MySQL
+Trusted: yes
+Base-URI: https://repo.mysql.com/apt/debian/dists/bullseye/
+By-Hash: yes
+Component: mysql-8.0
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Sources
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Sources
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: bullseye
+Repo-URI: https://repo.mysql.com/apt/debian/
+Site: https://repo.mysql.com/apt/debian
+Sourcesentry: /etc/apt/sources.list.d/mysql.list:8
+Target-Of: deb-src
+
+MetaKey: mysql-apt-config/binary-amd64/Packages
+ShortDesc: Packages
+Description: https://repo.mysql.com/apt/debian bullseye/mysql-apt-config amd64 Packages
+URI: https://repo.mysql.com/apt/debian/dists/bullseye/mysql-apt-config/binary-amd64/Packages
+Filename: /var/lib/apt/lists/repo.mysql.com_apt_debian_dists_bullseye_mysql-apt-config_binary-amd64_Packages.lz4
+Optional: no
+KeepCompressed: yes
+Codename: bullseye
+Label: MySQL
+Origin: MySQL
+Trusted: yes
+Architecture: amd64
+Base-URI: https://repo.mysql.com/apt/debian/dists/bullseye/
+By-Hash: yes
+Component: mysql-apt-config
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: bullseye
+Repo-URI: https://repo.mysql.com/apt/debian/
+Site: https://repo.mysql.com/apt/debian
+Sourcesentry: /etc/apt/sources.list.d/mysql.list:4
+Target-Of: deb
+
+MetaKey: mysql-8.0/binary-amd64/Packages
+ShortDesc: Packages
+Description: https://repo.mysql.com/apt/debian bullseye/mysql-8.0 amd64 Packages
+URI: https://repo.mysql.com/apt/debian/dists/bullseye/mysql-8.0/binary-amd64/Packages
+Filename: /var/lib/apt/lists/repo.mysql.com_apt_debian_dists_bullseye_mysql-8.0_binary-amd64_Packages.lz4
+Optional: no
+KeepCompressed: yes
+Codename: bullseye
+Label: MySQL
+Origin: MySQL
+Trusted: yes
+Architecture: amd64
+Base-URI: https://repo.mysql.com/apt/debian/dists/bullseye/
+By-Hash: yes
+Component: mysql-8.0
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: bullseye
+Repo-URI: https://repo.mysql.com/apt/debian/
+Site: https://repo.mysql.com/apt/debian
+Sourcesentry: /etc/apt/sources.list.d/mysql.list:5
+Target-Of: deb
+
+MetaKey: mysql-tools/binary-amd64/Packages
+ShortDesc: Packages
+Description: https://repo.mysql.com/apt/debian bullseye/mysql-tools amd64 Packages
+URI: https://repo.mysql.com/apt/debian/dists/bullseye/mysql-tools/binary-amd64/Packages
+Filename: /var/lib/apt/lists/repo.mysql.com_apt_debian_dists_bullseye_mysql-tools_binary-amd64_Packages.lz4
+Optional: no
+KeepCompressed: yes
+Codename: bullseye
+Label: MySQL
+Origin: MySQL
+Trusted: yes
+Architecture: amd64
+Base-URI: https://repo.mysql.com/apt/debian/dists/bullseye/
+By-Hash: yes
+Component: mysql-tools
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: bullseye
+Repo-URI: https://repo.mysql.com/apt/debian/
+Site: https://repo.mysql.com/apt/debian
+Sourcesentry: /etc/apt/sources.list.d/mysql.list:6
+Target-Of: deb
+
+MetaKey: main/binary-amd64/Packages
+ShortDesc: Packages
+Description: https://apt.postgresql.org/pub/repos/apt bullseye-pgdg/main amd64 Packages
+URI: https://apt.postgresql.org/pub/repos/apt/dists/bullseye-pgdg/main/binary-amd64/Packages
+Filename: /var/lib/apt/lists/apt.postgresql.org_pub_repos_apt_dists_bullseye-pgdg_main_binary-amd64_Packages.lz4
+Optional: no
+KeepCompressed: yes
+Codename: bullseye-pgdg
+Label: PostgreSQL for Debian/Ubuntu repository
+Origin: apt.postgresql.org
+Suite: bullseye-pgdg
+Trusted: yes
+Architecture: amd64
+Base-URI: https://apt.postgresql.org/pub/repos/apt/dists/bullseye-pgdg/
+By-Hash: yes
+Component: main
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: bullseye-pgdg
+Repo-URI: https://apt.postgresql.org/pub/repos/apt/
+Site: https://apt.postgresql.org/pub/repos/apt
+Sourcesentry: /etc/apt/sources.list.d/pgdg.list:1
+Target-Of: deb
+
+MetaKey: main/binary-amd64/Packages
+ShortDesc: Packages
+Description: https://packages.sury.org/php bullseye/main amd64 Packages
+URI: https://packages.sury.org/php/dists/bullseye/main/binary-amd64/Packages
+Filename: /var/lib/apt/lists/packages.sury.org_php_dists_bullseye_main_binary-amd64_Packages.lz4
+Optional: no
+KeepCompressed: yes
+Codename: bullseye
+Origin: deb.sury.org
+Suite: bullseye
+Trusted: yes
+Architecture: amd64
+Base-URI: https://packages.sury.org/php/dists/bullseye/
+By-Hash: yes
+Component: main
+CompressionTypes: gz xz bz2 lzma lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: bullseye
+Repo-URI: https://packages.sury.org/php/
+Site: https://packages.sury.org/php
+Sourcesentry: /etc/apt/sources.list.d/php.list:1
+Target-Of: deb
+

@@ -1,0 +1,85 @@
+MetaKey: main/binary-aarch64/Packages
+ShortDesc: Packages
+Description: https://packages-cf.termux.org/apt/termux-main stable/main aarch64 Packages
+URI: https://packages-cf.termux.org/apt/termux-main/dists/stable/main/binary-aarch64/Packages
+Filename: /data/data/com.termux/files/usr/var/lib/apt/lists/packages-cf.termux.org_apt_termux-main_dists_stable_main_binary-aarch64_Packages
+Optional: no
+KeepCompressed: no
+Codename: stable
+Label: termux-main stable
+Origin: termux-main stable
+Suite: stable
+Trusted: yes
+Architecture: aarch64
+Base-URI: https://packages-cf.termux.org/apt/termux-main/dists/stable/
+By-Hash: yes
+Component: main
+CompressionTypes: xz bz2 lzma gz lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: stable
+Repo-URI: https://packages-cf.termux.org/apt/termux-main/
+Site: https://packages-cf.termux.org/apt/termux-main
+Sourcesentry: /data/data/com.termux/files/usr/etc/apt/sources.list:2
+Target-Of: deb
+
+MetaKey: extras/binary-aarch64/Packages
+ShortDesc: Packages
+Description: https://its-pointless.github.io/files/21 termux/extras aarch64 Packages
+URI: https://its-pointless.github.io/files/21/dists/termux/extras/binary-aarch64/Packages
+Filename: /data/data/com.termux/files/usr/var/lib/apt/lists/its-pointless.github.io_files_21_dists_termux_extras_binary-aarch64_Packages
+Optional: no
+KeepCompressed: no
+Codename: termux
+Suite: termux
+Trusted: yes
+Version: 1
+Architecture: aarch64
+Base-URI: https://its-pointless.github.io/files/21/dists/termux/
+By-Hash: yes
+Component: extras
+CompressionTypes: xz bz2 lzma gz lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: termux
+Repo-URI: https://its-pointless.github.io/files/21/
+Site: https://its-pointless.github.io/files/21
+Sourcesentry: /data/data/com.termux/files/usr/etc/apt/sources.list.d/pointless.list:1
+Target-Of: deb
+
+MetaKey: extras/binary-all/Packages
+ShortDesc: Packages
+Description: https://its-pointless.github.io/files/21 termux/extras all Packages
+URI: https://its-pointless.github.io/files/21/dists/termux/extras/binary-all/Packages
+Filename: /data/data/com.termux/files/usr/var/lib/apt/lists/its-pointless.github.io_files_21_dists_termux_extras_binary-all_Packages
+Optional: yes
+KeepCompressed: no
+Codename: termux
+Suite: termux
+Trusted: yes
+Version: 1
+Architecture: all
+Base-URI: https://its-pointless.github.io/files/21/dists/termux/
+By-Hash: yes
+Component: extras
+CompressionTypes: xz bz2 lzma gz lz4 zst uncompressed
+Created-By: Packages
+DefaultEnabled: yes
+Fallback-Of: 
+Identifier: Packages
+KeepCompressedAs: lz4 zst gz xz bz2 lzma uncompressed
+PDiffs: yes
+Release: termux
+Repo-URI: https://its-pointless.github.io/files/21/
+Site: https://its-pointless.github.io/files/21
+Sourcesentry: /data/data/com.termux/files/usr/etc/apt/sources.list.d/pointless.list:1
+Target-Of: deb
+
