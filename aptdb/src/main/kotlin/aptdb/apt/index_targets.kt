@@ -61,7 +61,7 @@ sealed class FieldError {
 @JvmInline value class Uri(val value: String)
 
 fun Data.uri(): ValidatedNel<FieldError, Uri> =
-  field("Uri") { Uri(it) }
+  field("URI") { Uri(it) }
   
 @JvmInline value class MetaKey(val value: String)
 
@@ -81,7 +81,7 @@ fun Data.description() =
 @JvmInline value class FileName(val value: String)
 
 fun Data.fileName() =
-  field("FileName") { FileName(it) }
+  field("Filename") { FileName(it) }
 
 @JvmInline value class IsOptional(val value: Boolean)
 

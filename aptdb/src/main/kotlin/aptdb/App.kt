@@ -10,3 +10,20 @@ import arrow.core.continuations.*
 //   println("Index Targets:")
 //   indexTargets.forEach { println("\t${it.bind().fileName}") }
 // }
+
+suspend fun main() {
+  val targets = indexTargets()
+  targets.forEach { debug(it) }
+}
+
+suspend fun debug(target: ValidatedNel<FieldError, AptIndexTarget>) {
+  target.tap {
+    println("${it.fileName}")
+  }.tapInvalid { l ->
+    println("Invalid")
+    l.forEach { println("\t$it") }
+  }
+}
+
+suspend fun indexTargets(): List<ValidatedNel<FieldError, AptIndexTarget>> =
+  DefaultAptIndexTargetProvider.indexTargets()
