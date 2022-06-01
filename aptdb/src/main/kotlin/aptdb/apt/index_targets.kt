@@ -9,32 +9,22 @@ import arrow.core.*
 import com.lordcodes.turtle.shellRun
 
 interface AptIndexTargetProvider {
-  suspend fun indexTargets() =
-    shellRun("apt-get", listOf("indextargets")).let { RawAptIndexTarget.from(it) }
+  suspend fun indexTargets(): List<ValidatedNel<FieldError, AptIndexTarget>> =
+    shellRun("apt-get", listOf("indextargets")).let { aptIndexTargets(it) }
 }
 
 object DefaultAptIndexTargetProvider: AptIndexTargetProvider { }
 
-data class RawAptIndexTarget(
-  private val data: Map<String, String>
-) {
-  val file: Path? by lazy {
-    data["Filename"]?.let { Paths.get(it) }
-  }
-  
-  companion object {
-    fun from(indexTargets: String) =
-      indexTargets.split("\n")
-                  .windowedBy { it == "" }
-                  .map { from(it) }
-    
-    fun from(lines: List<String>) =
-      lines.map { it.split(": ") }
-           .map { it[0] to it[1] }
-           .toMap()
-           .let { it.indexTarget() }
-  }
-}
+suspend fun aptIndexTargets(indexTargets: String): List<ValidatedNel<FieldError, AptIndexTarget>> =
+  indexTargets.split("\n")
+              .windowedBy { it == "" }
+              .map { aptIndexTarget(it) }
+              
+suspend fun aptIndexTarget(lines: List<String>): ValidatedNel<FieldError, AptIndexTarget> =
+  lines.map { it.split(": ") }
+       .map { it[0] to it[1] }
+       .toMap()
+       .let { it.indexTarget() }
 
 internal typealias Data = Map<String, String>
 
@@ -68,37 +58,37 @@ sealed class FieldError {
   ): FieldError()
 }
 
-inline class Uri(val value: String)
+@JvmInline value class Uri(val value: String)
 
 fun Data.uri(): ValidatedNel<FieldError, Uri> =
   field("Uri") { Uri(it) }
   
-inline class MetaKey(val value: String)
+@JvmInline value class MetaKey(val value: String)
 
 fun Data.metaKey() =
   field("MetaKey") { MetaKey(it) }
 
-inline class ShortDescription(val value: String)
+@JvmInline value class ShortDescription(val value: String)
 
 fun Data.shortDescription() =
   field("ShortDesc") { ShortDescription(it) }
 
-inline class Description (val value: String)
+@JvmInline value class Description (val value: String)
 
 fun Data.description() =
   field("Description") { Description(it) }
 
-inline class FileName(val value: String)
+@JvmInline value class FileName(val value: String)
 
 fun Data.fileName() =
   field("FileName") { FileName(it) }
 
-inline class IsOptional(val value: Boolean)
+@JvmInline value class IsOptional(val value: Boolean)
 
 fun Data.optional() =
   bool("Optional") { IsOptional(it) }
 
-inline class KeepCompressed(val value: Boolean)
+@JvmInline value class KeepCompressed(val value: Boolean)
 
 fun Data.keepCompressed() =
   bool("KeepCompressed") { KeepCompressed(it) }
@@ -111,15 +101,9 @@ fun Data.indexTarget(): ValidatedNel<FieldError, AptIndexTarget> =
     fileName(),
     optional(),
     keepCompressed()
-  ) { u, m, s, d, f, o, k ->
+  ) { uri, metaKey, shortDescription, description, fileName, optional, keepCompressed ->
     AptIndexTarget(
-      u,
-      m,
-      s,
-      d,
-      f,
-      o,
-      k
+      uri, metaKey, shortDescription, description, fileName, optional, keepCompressed
     )
   }
 
