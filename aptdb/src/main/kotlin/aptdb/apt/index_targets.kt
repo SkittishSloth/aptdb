@@ -60,40 +60,40 @@ sealed class FieldError {
 
 @JvmInline value class Uri(val value: String)
 
-fun Data.uri(): ValidatedNel<FieldError, Uri> =
+internal fun Data.uri(): ValidatedNel<FieldError, Uri> =
   field("URI") { Uri(it) }
   
 @JvmInline value class MetaKey(val value: String)
 
-fun Data.metaKey() =
+internal fun Data.metaKey() =
   field("MetaKey") { MetaKey(it) }
 
 @JvmInline value class ShortDescription(val value: String)
 
-fun Data.shortDescription() =
+internal fun Data.shortDescription() =
   field("ShortDesc") { ShortDescription(it) }
 
 @JvmInline value class Description (val value: String)
 
-fun Data.description() =
+internal fun Data.description() =
   field("Description") { Description(it) }
 
 @JvmInline value class FileName(val value: String)
 
-fun Data.fileName() =
+internal fun Data.fileName() =
   field("Filename") { FileName(it) }
 
 @JvmInline value class IsOptional(val value: Boolean)
 
-fun Data.optional() =
+internal fun Data.optional() =
   bool("Optional") { IsOptional(it) }
 
 @JvmInline value class KeepCompressed(val value: Boolean)
 
-fun Data.keepCompressed() =
+internal fun Data.keepCompressed() =
   bool("KeepCompressed") { KeepCompressed(it) }
 
-fun Data.indexTarget(): ValidatedNel<FieldError, AptIndexTarget> =
+internal fun Data.indexTarget(): ValidatedNel<FieldError, AptIndexTarget> =
   uri().zip(
     metaKey(),
     shortDescription(),
