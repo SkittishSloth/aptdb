@@ -5,7 +5,7 @@ import java.nio.file.*
 import kotlin.collections.*
 import kotlin.io.path.*
 
-import com.lordcodes.turtle.shellRun
+import com.lordcodes.turtle.*
 
 interface ConfigurationProvider {
     fun configDump(): String = shellRun("apt-config", listOf("dump"))

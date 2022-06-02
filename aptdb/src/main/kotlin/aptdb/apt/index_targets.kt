@@ -5,12 +5,13 @@ import aptdb.utils.*
 import java.nio.file.*
 
 import arrow.core.*
+import arrow.core.continuations.*
 
-import com.lordcodes.turtle.shellRun
+typealias IndexTargetResults = List<ValidatedNel<FieldError, AptIndexTarget>>
 
 interface AptIndexTargetProvider {
-  suspend fun indexTargets(): List<ValidatedNel<FieldError, AptIndexTarget>> =
-    shellRun("apt-get", listOf("indextargets")).let { aptIndexTargets(it) }
+  suspend fun indexTargets(): Effect<ShellError<*>, IndexTargetResults> =
+    shellRun(ShellCommand("apt-get", listOf("indextargets"))) { aptIndexTargets(it) }
 }
 
 object DefaultAptIndexTargetProvider: AptIndexTargetProvider { }

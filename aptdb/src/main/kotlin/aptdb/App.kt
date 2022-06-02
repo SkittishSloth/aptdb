@@ -1,13 +1,21 @@
 package aptdb
 
 import aptdb.apt.*
+import aptdb.utils.*
 
 import arrow.core.*
 import arrow.core.continuations.*
 
 suspend fun main() {
-  val targets = indexTargets()
-  targets.forEach { debug(it) }
+  indexTargets().fold(
+    { error(it) },
+    { targets -> targets.forEach { debug(it) } }
+  )
+}
+
+suspend fun error(error: ShellError<*>) {
+  println("An error occurred.")
+  println(error)
 }
 
 suspend fun debug(target: ValidatedNel<FieldError, AptIndexTarget>) {
@@ -19,5 +27,5 @@ suspend fun debug(target: ValidatedNel<FieldError, AptIndexTarget>) {
   }
 }
 
-suspend fun indexTargets(): List<ValidatedNel<FieldError, AptIndexTarget>> =
+suspend fun indexTargets(): Effect<ShellError<*>, IndexTargetResults> =
   DefaultAptIndexTargetProvider.indexTargets()
