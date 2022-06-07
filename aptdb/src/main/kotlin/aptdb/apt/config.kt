@@ -15,6 +15,12 @@ interface ConfigurationProvider {
 
 object DefaultConfigurationProvider : ConfigurationProvider { }
 
+sealed class ConfigurationError {
+  data class KeyNotFound(
+    val key: String
+  ): ConfigurationError()
+}
+
 enum class PropertyType {
   Marker,
   Simple,
@@ -61,8 +67,6 @@ sealed class ConfigurationProperty() {
     
   }
 }
-
-
 
 data class ConfigurationProperties(
  private val config: Map<String, List<String>>

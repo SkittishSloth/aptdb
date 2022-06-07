@@ -24,7 +24,7 @@ object Test {
       println(error)
     }
     
-    suspend fun debug(target: ValidatedNel<FieldError, AptIndexTarget>) {
+    suspend fun debug(target: ValidatedNel<IndexTargetError, AptIndexTarget>) {
       target.tap {
         println("${it.fileName}")
       }.tapInvalid { l ->

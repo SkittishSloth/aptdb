@@ -9,5 +9,5 @@ plugins {
 }
 
 dependencies {
-    implementation("com.lordcodes.turtle:turtle:0.6.0")
+    implementation("com.lordcodes.turtle:turtle:_")
 }
