@@ -1,4 +1,4 @@
-package aptdb.apt
+package aptdb.indexes
 
 import io.kotest.core.*
 import io.kotest.core.spec.style.FeatureSpec

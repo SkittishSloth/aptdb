@@ -26,6 +26,14 @@ dependencies {
   implementation("io.arrow-kt:arrow-core")
   implementation("io.arrow-kt:arrow-fx-coroutines")
   
+  // CLI Libraries
+  implementation("com.github.ajalt.clikt:clikt:_")
+  implementation("com.varabyte.kotter:kotter:_")
+  
+  // Dependency Injection 
+  implementation (Koin.core)
+  testImplementation(Koin.test)
+
   testImplementation(Testing.kotest.runner.junit5)
   testImplementation(Testing.kotest.assertions.core)
   testImplementation(Testing.kotest.property)

@@ -1,6 +1,7 @@
 package aptdb
 
 import aptdb.apt.*
+import aptdb.indexes.*
 import aptdb.utils.*
 
 import arrow.core.*
