@@ -31,7 +31,7 @@ dependencies {
   implementation("com.varabyte.kotter:kotter:_")
   
   // Dependency Injection 
-  implementation (Koin.core)
+  implementation(Koin.core)
   testImplementation(Koin.test)
 
   testImplementation(Testing.kotest.runner.junit5)
