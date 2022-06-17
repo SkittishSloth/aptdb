@@ -33,6 +33,20 @@ dependencies {
   // Dependency Injection 
   implementation(Koin.core)
   testImplementation(Koin.test)
+  
+  // Nitrite Database
+  implementation("org.dizitart:nitrite:_")
+  implementation("org.dizitart:potassium-nitrite:_")
+  
+  // Kodein Database
+  implementation("org.kodein.db:kodein-db-jvm:_")
+  implementation("org.kodein.db:kodein-db-serializer-kotlinx:_")
+  implementation("org.kodein.db:kodein-db-serializer-kyro-jvm:_")
+  implementation("org.kodein.db:kodein-leveldb-jni-jvm-linux:_")
+  
+  // uncomment if you don't want to limit it to just linux for some reason?
+  // implementation("org.kodein.db:kodein-leveldb-jni-jvm:_")
+  
 
   testImplementation(Testing.kotest.runner.junit5)
   testImplementation(Testing.kotest.assertions.core)
