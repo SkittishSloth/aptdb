@@ -11,7 +11,7 @@ val kotestVersion: String by extra("5.2.3")
 
 dependencies {
   implementation("com.lordcodes.turtle:turtle:_")
-  implementation("dev.dirs:directories:26")
+  implementation("dev.dirs:directories:_")
   
   // Align versions of all Kotlin components
   implementation(platform("org.jetbrains.kotlin:kotlin-bom:_"))

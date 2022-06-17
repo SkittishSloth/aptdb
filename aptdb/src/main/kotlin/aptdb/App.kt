@@ -3,15 +3,23 @@ package aptdb
 import aptdb.apt.*
 import aptdb.indexes.*
 import aptdb.utils.*
+import aptdb.io.*
 
 import arrow.core.*
 import arrow.core.continuations.*
 
 suspend fun main() {
+  Test.Paths.debug()
   Test.IndexTargets.go()
 }
 
 object Test {
+  object Paths {
+    suspend fun debug() {
+      println("Application Paths:")
+      println(DefaultApplicationPaths.projectDirectories())
+    }
+  }
   object IndexTargets {
     suspend fun go() {
       indexTargets().fold(
