@@ -41,7 +41,7 @@ dependencies {
   // Kodein Database
   implementation("org.kodein.db:kodein-db-jvm:_")
   implementation("org.kodein.db:kodein-db-serializer-kotlinx:_")
-  implementation("org.kodein.db:kodein-db-serializer-kyro-jvm:_")
+  // implementation("org.kodein.db:kodein-db-serializer-kyro-jvm:_")
   implementation("org.kodein.db:kodein-leveldb-jni-jvm-linux:_")
   
   // uncomment if you don't want to limit it to just linux for some reason?
