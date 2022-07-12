@@ -7,8 +7,6 @@ repositories {
   mavenCentral()
 }
 
-val kotestVersion: String by extra("5.2.3")
-
 dependencies {
   implementation("com.lordcodes.turtle:turtle:_")
   implementation("dev.dirs:directories:_")
@@ -30,24 +28,18 @@ dependencies {
   implementation("com.github.ajalt.clikt:clikt:_")
   implementation("com.varabyte.kotter:kotter:_")
   
+  // database stuff 
+  implementation("com.h2database:h2:_")
+  
+  implementation("org.jetbrains.exposed:exposed-core:_")
+  implementation("org.jetbrains.exposed:exposed-dao:_")
+  implementation("org.jetbrains.exposed:exposed-jdbc:_")
+  implementation("org.jetbrains.exposed:exposed-kotlin-datetime:_")
+  
   // Dependency Injection 
   implementation(Koin.core)
   testImplementation(Koin.test)
   
-  // Nitrite Database
-  implementation("org.dizitart:nitrite:_")
-  implementation("org.dizitart:potassium-nitrite:_")
-  
-  // Kodein Database
-  implementation("org.kodein.db:kodein-db-jvm:_")
-  implementation("org.kodein.db:kodein-db-serializer-kotlinx:_")
-  // implementation("org.kodein.db:kodein-db-serializer-kyro-jvm:_")
-  implementation("org.kodein.db:kodein-leveldb-jni-jvm-linux:_")
-  
-  // uncomment if you don't want to limit it to just linux for some reason?
-  // implementation("org.kodein.db:kodein-leveldb-jni-jvm:_")
-  
-
   testImplementation(Testing.kotest.runner.junit5)
   testImplementation(Testing.kotest.assertions.core)
   testImplementation(Testing.kotest.property)
