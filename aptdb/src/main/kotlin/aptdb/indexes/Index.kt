@@ -20,7 +20,6 @@ object Indexes: IntIdTable("indexes") {
 }
 
 class Index(id: EntityID<Int>): IntEntity(id) {
-  companion object: IntEntityClass<Index>(Indexes)
   
   val uri by Indexes.uri
   val metaKey by Indexes.metaKey
@@ -31,4 +30,18 @@ class Index(id: EntityID<Int>): IntEntity(id) {
   val keepCompressed by Indexes.keepCompressed
   val indexAdded by Indexes.indexAdded
   val fileModified by Indexes.fileModified
+  
+  companion object: IntEntityClass<Index>(Indexes) {
+    fun new(index: AptIndexTarget): Index =
+      Index.new {
+        uri = index.uri.value
+        metaKey = index.metaKey.value
+        shortDesc = index.shortDesc.value
+        description = index.description.value
+        fileName = index.fileName.value
+        optional = index.optional.value
+        keepCompressed = index.keepCompressed.value
+        fileModified = index.fileModified
+      }
+  }
 }
