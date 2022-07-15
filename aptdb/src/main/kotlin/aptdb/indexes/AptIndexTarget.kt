@@ -2,6 +2,8 @@ package aptdb.indexes
 
 import kotlinx.datetime.*
 
+import java.time.LocalDateTime as jtLocalDateTime
+import java.time.ZoneId
 import java.nio.file.*
 import java.nio.file.attribute.*
 
@@ -16,10 +18,9 @@ data class AptIndexTarget(
 ) {
   val fileModified: LocalDateTime by lazy {
     val path = Paths.get(fileName.value)
-    val attributeView = Files.getFileAttributeView(path, BasicFileAttributeView.javaClass)
-    val attributes = attributeView.readAttributes()
+    val attributes = Files.readAttributes(path, BasicFileAttributes::class.java)
     val modified = attributes.lastModifiedTime()
     
-    return LocalDateTime.ofInstant(modified.toInstant())
+    jtLocalDateTime.ofInstant(modified.toInstant(), ZoneId.systemDefault()).toKotlinLocalDateTime()
   }
 }

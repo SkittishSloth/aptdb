@@ -12,7 +12,7 @@ object Indexes: IntIdTable("indexes") {
   val metaKey = varchar("metaKey", 128)
   val shortDesc = varchar("shortDesc", 128)
   val description = text("description")
-  val fileName = varchar("fileName", 4096)
+  val fileName = varchar("fileName", 4096).unique()
   val optional = bool("optional")
   val keepCompressed = bool("keepCompressed")
   val indexAdded = timestamp("indexAdded")
@@ -21,15 +21,33 @@ object Indexes: IntIdTable("indexes") {
 
 class Index(id: EntityID<Int>): IntEntity(id) {
   
-  val uri by Indexes.uri
-  val metaKey by Indexes.metaKey
-  val shortDesc by Indexes.shortDesc
-  val description by Indexes.description
-  val fileName by Indexes.fileName
-  val optional by Indexes.optional
-  val keepCompressed by Indexes.keepCompressed
-  val indexAdded by Indexes.indexAdded
-  val fileModified by Indexes.fileModified
+  var uri by Indexes.uri
+    private set
+
+  var metaKey by Indexes.metaKey
+    private set
+
+  var shortDesc by Indexes.shortDesc
+    private set
+
+  var description by Indexes.description
+    private set
+
+  var fileName by Indexes.fileName
+    private set
+
+  var optional by Indexes.optional
+    private set
+
+  var keepCompressed by Indexes.keepCompressed
+    private set
+
+  var indexAdded by Indexes.indexAdded
+    private set
+
+  var fileModified by Indexes.fileModified
+    private set
+
   
   companion object: IntEntityClass<Index>(Indexes) {
     fun new(index: AptIndexTarget): Index =
