@@ -1,5 +1,7 @@
 package aptdb.indexes
 
+import kotlinx.datetime.*
+
 import org.jetbrains.exposed.dao.*
 import org.jetbrains.exposed.dao.id.EntityID
 import org.jetbrains.exposed.dao.id.IntIdTable
@@ -7,15 +9,17 @@ import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.kotlin.datetime.*
 import org.jetbrains.exposed.sql.transactions.transaction
 
+fun currentDateTime(): Instant = Clock.System.now()
+
 object Indexes: IntIdTable("indexes") {
   val uri = varchar("uri", 256)
   val metaKey = varchar("metaKey", 128)
   val shortDesc = varchar("shortDesc", 128)
   val description = text("description")
-  val fileName = varchar("fileName", 4096).unique()
+  val fileName = varchar("fileName", 4096).uniqueIndex()
   val optional = bool("optional")
   val keepCompressed = bool("keepCompressed")
-  val indexAdded = timestamp("indexAdded")
+  val indexAdded = timestamp("indexAdded").clientDefault { currentDateTime() }
   val fileModified = datetime("fileModified")
 }
 
